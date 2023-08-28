@@ -1,0 +1,13 @@
+# Dockerコンテナ内の環境でVSCodeを用いて開発を行うための起動設定
+# VSCodeでコマンドパレットを開いて"Reopen in Container"を実行する
+version: "3.5"
+
+services:
+  work:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.work
+    working_dir: "/workspace/"
+    command: ["sleep", "infinity"]
+    volumes:
+      - "../:/workspace/:delegated"
