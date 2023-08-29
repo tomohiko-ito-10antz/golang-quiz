@@ -4,10 +4,9 @@ import "fmt"
 
 func main() {
 	var a any
-	switch a.(type) {
-	case any:
+	if _, ok := a.(any); ok {
 		fmt.Println("X")
-	default:
+	} else {
 		fmt.Println("Y")
 	}
 }
