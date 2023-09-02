@@ -5,8 +5,8 @@ import (
 )
 
 func f() (x string) {
-	b := "Y"
-	defer func() { b = "X" }()
+	b := "X"
+	defer func() { b = "Y" }()
 	return b
 }
 func main() {
