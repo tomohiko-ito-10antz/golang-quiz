@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func f() (x string) {
+func f() string {
 	b := "X"
 	defer func() { b = "Y" }()
 	return b
